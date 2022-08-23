@@ -9,8 +9,9 @@
     "changelogUrl": "https://github.com/SkaterXLModding/skater-xl-editor-tools/blob/main/CHANGELOG.md",
     "licensesUrl": "https://github.com/SkaterXLModding/skater-xl-editor-tools/blob/main/LICENSE.md",
     "hideInEditor": "true",
-    "dependencies": {
-        
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SkaterXLModding/skater-xl-editor-tools"
     },
     "keywords": [        
         "Editor",
