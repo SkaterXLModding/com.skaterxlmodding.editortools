@@ -1,0 +1,25 @@
+{
+    "name": "com.SkaterXLModding.skater-xl-editor-tools",
+    "version": "0.0.1",
+    "displayName": "Skater XL Editor Tools",
+    "description": "",
+    "unity": "2019.3",
+    "unityRelease": "15",
+    "documentationUrl": "https://github.com/SkaterXLModding/skater-xl-editor-tools",
+    "changelogUrl": "",
+    "licensesUrl": "",
+    "hideInEditor": "true",
+    "dependencies": {
+        
+    },
+    "keywords": [        
+        "Editor",
+        "Tools",
+        "SkaterXL"
+    ],
+    "author": {
+        "name": "Greg Amato",
+        "email": "Amatobahn#0635",
+        "url": "https://gregamato.dev"
+    }
+}
