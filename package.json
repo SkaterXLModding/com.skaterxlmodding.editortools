@@ -1,14 +1,10 @@
 {
-    "name": "com.SkaterXLModding.SkaterXLEditorTools",
+    "name": "com.skaterxlmodding.editortools",
     "version": "0.0.1",
     "displayName": "Skater XL Editor Tools",
     "unity": "2019.3",
-    "documentationUrl": "https://github.com/SkaterXLModding/skater-xl-editor-tools",
-    "changelogUrl": "https://github.com/SkaterXLModding/skater-xl-editor-tools/blob/main/CHANGELOG.md",
-    "licensesUrl": "https://github.com/SkaterXLModding/skater-xl-editor-tools/blob/main/LICENSE.md",
-    "hideInEditor": "true",
     "dependencies": {
-        
+
     },
     "repository": {
         "type": "git",
