@@ -9,7 +9,7 @@ using UnityEditor.SceneManagement;
 
 public class SXLBundleBuilder : EditorWindow
 {
-    private const string m_BuilderConfigPath = "Assets/Editor/SkaterXL_BundleBuilder/bundleBuilderConfiguration.asset";
+    private static string m_BuilderConfigPath = "Packages/com.skaterxlmodding.editortools/Editor/SkaterXL_BundleBuilder/bundleBuilderConfiguration.asset";
 
     SerializedObject m_SerializedBuilderConfig;
     SerializedProperty m_ConfigPath;
@@ -33,6 +33,9 @@ public class SXLBundleBuilder : EditorWindow
 
     void OnEnable()
     {
+        if (!File.Exists(m_BuilderConfigPath))
+            m_BuilderConfigPath = "Assets/com.skaterxlmodding.editortools/Editor/SkaterXL_BundleBuilder/bundleBuilderConfiguration.asset";
+        
         m_BundleBuilderConfig = (BundleBuilderConfig)AssetDatabase.LoadAssetAtPath(m_BuilderConfigPath, typeof(BundleBuilderConfig));
 
         if (!m_BundleBuilderConfig)
