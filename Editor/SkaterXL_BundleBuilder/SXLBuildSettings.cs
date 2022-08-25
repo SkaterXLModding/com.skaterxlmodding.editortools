@@ -24,7 +24,7 @@ public class SXLBundleBuilder : EditorWindow
     private bool generateLighting = false;
 
 
-    [MenuItem("SkaterXL/Asset Bundles/Asset Bundle Builder...")]
+    [MenuItem("SkaterXL/Asset Bundle Builder...", false, 100)]
     public static void ShowWindow()
     {
         var wnd = GetWindow(typeof(SXLBundleBuilder), true, "Asset Bundle Builder");

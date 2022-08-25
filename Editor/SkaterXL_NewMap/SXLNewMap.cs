@@ -16,7 +16,7 @@ public class SXLNewMap : EditorWindow
     private bool m_multiSceneMode = false;
     private bool m_includeBlockinScene = false;
 
-    [MenuItem("SkaterXL/New Map Wizard...")]
+    [MenuItem("SkaterXL/New Map Wizard...", false, 2)]
     public static void ShowWindow()
     {
         var wnd = GetWindow(typeof(SXLNewMap), true, "SkaterXL New Map Wizard");
