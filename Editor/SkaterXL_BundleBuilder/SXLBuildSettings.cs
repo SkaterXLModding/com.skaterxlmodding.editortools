@@ -20,8 +20,15 @@ public class SXLBundleBuilder : EditorWindow
     SerializedProperty m_subLevels;
 
     private BundleBuilderConfig m_BundleBuilderConfig;
+
+    private static bool m_runPreprocess = false;
     private bool openOnComplete = false;
     private bool generateLighting = false;
+
+    public static bool RunPreprocess
+    {
+        get => m_runPreprocess;
+    }
 
 
     [MenuItem("SkaterXL/Asset Bundle Builder...", false, 100)]
@@ -109,6 +116,11 @@ public class SXLBundleBuilder : EditorWindow
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(20);
+            m_runPreprocess = EditorGUILayout.Toggle("Run Preprocess", m_runPreprocess);
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(20);
             generateLighting = EditorGUILayout.Toggle("Generate Lighting", generateLighting);
             GUILayout.EndHorizontal();
 
@@ -126,6 +138,7 @@ public class SXLBundleBuilder : EditorWindow
                 if (!config.baseLevel) return;
                 EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
                 CombineScenesAndBuildBundle(config);
+                GUIUtility.ExitGUI();
             }
         }
         GUILayout.EndVertical();
